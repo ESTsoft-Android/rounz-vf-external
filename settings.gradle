@@ -1,2 +1,2 @@
 rootProject.name='rounz-vf-external-android'
-include ':app'
+include ':vf-external'
