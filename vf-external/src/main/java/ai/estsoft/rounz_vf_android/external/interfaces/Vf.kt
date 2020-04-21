@@ -3,6 +3,7 @@ package ai.estsoft.rounz_vf_android.external.interfaces
 import ai.estsoft.rounz_vf_android.external.model.VfScaleType
 import ai.estsoft.rounz_vf_android.external.response.VfRenderResponse
 import ai.estsoft.rounz_vf_android.external.response.VfStoreResponse
+import java.io.File
 
 interface Vf {
 
@@ -52,12 +53,12 @@ interface Vf {
     /**
      * 전달받은 이미지 버퍼를 DCIM 디렉터리의 [imagePrefixName] 이름으로 시작되는 파일로 저장
      *
+     * @param file 저장되는 파일경로
      * @param imageBuffer base64 인코딩된 이미지 버퍼
-     * @param imagePrefixName 사진 저장시
      * @return 저장 완료 결과
      */
     fun storeCaptureImage(
-        imageBuffer: String,
-        imagePrefixName: String
+        file: File,
+        imageBuffer: String
     ): VfStoreResponse
 }
