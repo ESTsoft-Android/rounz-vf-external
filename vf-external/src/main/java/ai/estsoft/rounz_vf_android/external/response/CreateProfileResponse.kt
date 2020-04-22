@@ -5,5 +5,7 @@ sealed class CreateProfileResponse {
 
     object NotDetectedFace : CreateProfileResponse()
 
+    object NetworkError : CreateProfileResponse()
+
     class Failure(val throwable: Throwable) : CreateProfileResponse()
 }
