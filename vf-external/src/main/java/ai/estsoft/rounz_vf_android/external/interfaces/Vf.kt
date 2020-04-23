@@ -1,6 +1,7 @@
 package ai.estsoft.rounz_vf_android.external.interfaces
 
 import ai.estsoft.rounz_vf_android.external.model.VfScaleType
+import ai.estsoft.rounz_vf_android.external.response.VfInitResponse
 import ai.estsoft.rounz_vf_android.external.response.VfRenderResponse
 import ai.estsoft.rounz_vf_android.external.response.VfStoreResponse
 import java.io.File
@@ -8,7 +9,15 @@ import java.io.File
 interface Vf {
 
     /**
-     * Vf 에 필요한 리소스들을 로드하며, 피팅 준비를 하는 Action Url 생성
+     * Vf 에 필요한 리소스들을 로드하며, 초기화 작업 진행
+     *
+     * @return 초기화 작업 결과
+     */
+    fun init(
+    ): VfInitResponse
+
+    /**
+     *  피팅 준비를 하는 Action Url 생성
      *
      * @return Action Url 생성 완료 결과
      */
