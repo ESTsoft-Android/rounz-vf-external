@@ -3,7 +3,7 @@ package ai.estsoft.rounz_vf_android.external.interfaces
 import android.graphics.Rect
 import android.util.Size
 
-interface FaceRecognizeRender {
+interface FaceDetectingRender {
     /**
      * 모듈 안에서 가이드라인 영역을 계산하기 위해 값을 넘겨받는 함수입니다.
      *
