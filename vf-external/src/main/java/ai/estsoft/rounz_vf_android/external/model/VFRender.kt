@@ -1,6 +1,6 @@
 package ai.estsoft.rounz_vf_android.external.model
 
-data class VfRender(
+data class VFRender(
     val productId: Int,
     val profileName: String,
     val vfResourceUrl: String
@@ -9,6 +9,6 @@ data class VfRender(
         get() = "0_user_profile/${profileName}"
 
     companion object {
-        val EMPTY = VfRender(0, "", "")
+        val EMPTY = VFRender(0, "", "")
     }
 }

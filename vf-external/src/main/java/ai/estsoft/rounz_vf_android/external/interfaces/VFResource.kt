@@ -1,8 +1,8 @@
 package ai.estsoft.rounz_vf_android.external.interfaces
 
-import ai.estsoft.rounz_vf_android.external.response.DownloadVfResourceResponse
+import ai.estsoft.rounz_vf_android.external.response.DownloadVFResourceResponse
 
-interface VfResource {
+interface VFResource {
     /**
      * 피팅을 위한 전반적인 리소스를 다운로드 합니다.
      *
@@ -11,7 +11,7 @@ interface VfResource {
      */
     fun downloadCollections(
         url: String
-    ): DownloadVfResourceResponse
+    ): DownloadVFResourceResponse
 
     /**
      * 상품 ID에 대한 VF 리소스를 다운로드 합니다.
@@ -23,5 +23,5 @@ interface VfResource {
     fun downloadProduct(
         productId: Int,
         vfResourceUrl: String
-    ): DownloadVfResourceResponse
+    ): DownloadVFResourceResponse
 }
