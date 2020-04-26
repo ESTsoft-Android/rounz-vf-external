@@ -1,28 +1,28 @@
 package ai.estsoft.rounz_vf_android.external.interfaces
 
-import ai.estsoft.rounz_vf_android.external.model.VfScaleType
-import ai.estsoft.rounz_vf_android.external.response.VfInitResponse
-import ai.estsoft.rounz_vf_android.external.response.VfRenderResponse
-import ai.estsoft.rounz_vf_android.external.response.VfStoreResponse
+import ai.estsoft.rounz_vf_android.external.model.VFScaleType
+import ai.estsoft.rounz_vf_android.external.response.VFActionResponse
+import ai.estsoft.rounz_vf_android.external.response.VFInitResponse
+import ai.estsoft.rounz_vf_android.external.response.VFStoreResponse
 import java.io.File
 
-interface Vf {
+interface VF {
 
     /**
-     * Vf 에 필요한 리소스들을 로드하며, 초기화 작업 진행
+     * VF 에 필요한 리소스들을 로드하며, 초기화 작업 진행
      *
      * @return 초기화 작업 결과
      */
     fun init(
-    ): VfInitResponse
+    ): VFInitResponse
 
     /**
      *  피팅 준비를 하는 Action Url 생성
      *
      * @return Action Url 생성 완료 결과
      */
-    fun ready(
-    ): VfRenderResponse
+    fun prepare(
+    ): VFActionResponse
 
     /**
      * 피팅뷰의 스케일 타입을 변경하는 Action Url 생성
@@ -31,8 +31,8 @@ interface Vf {
      * @return Action Url 생성 완료 결과
      */
     fun scaleType(
-        scaleType: VfScaleType
-    ): VfRenderResponse
+        scaleType: VFScaleType
+    ): VFActionResponse
 
     /**
      * 요청한 파라미터로 피팅 이미지 렌더링을 요청하는 Action Url 생성
@@ -49,7 +49,7 @@ interface Vf {
         productId: Int,
         profileName: String,
         front: Float = 0f, rear: Float = 0f, legLength: Float = 0f, faceYaw: Float = 0f
-    ): VfRenderResponse
+    ): VFActionResponse
 
     /**
      * 현재 상품이 착용되어 있는화면을 저장하는 요청 Url 생성
@@ -57,10 +57,10 @@ interface Vf {
      * @return Action Url 생성 완료 결과
      */
     fun requestCapture(
-    ): VfRenderResponse
+    ): VFActionResponse
 
     /**
-     * 전달받은 이미지 버퍼를 DCIM 디렉터리의 [imagePrefixName] 이름으로 시작되는 파일로 저장
+     * 전달받은 이미지 버퍼를 전달받은 파일 경로에 저장
      *
      * @param file 저장되는 파일경로
      * @param imageBuffer base64 인코딩된 이미지 버퍼
@@ -69,5 +69,5 @@ interface Vf {
     fun storeCaptureImage(
         file: File,
         imageBuffer: String
-    ): VfStoreResponse
+    ): VFStoreResponse
 }
