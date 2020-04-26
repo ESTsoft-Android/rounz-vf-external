@@ -1,8 +1,8 @@
 package ai.estsoft.rounz_vf_android.external.interfaces
 
 import ai.estsoft.rounz_vf_android.external.model.VFScaleType
+import ai.estsoft.rounz_vf_android.external.response.VFActionResponse
 import ai.estsoft.rounz_vf_android.external.response.VFInitResponse
-import ai.estsoft.rounz_vf_android.external.response.VFRenderResponse
 import ai.estsoft.rounz_vf_android.external.response.VFStoreResponse
 import java.io.File
 
@@ -22,7 +22,7 @@ interface VF {
      * @return Action Url 생성 완료 결과
      */
     fun ready(
-    ): VFRenderResponse
+    ): VFActionResponse
 
     /**
      * 피팅뷰의 스케일 타입을 변경하는 Action Url 생성
@@ -32,7 +32,7 @@ interface VF {
      */
     fun scaleType(
         scaleType: VFScaleType
-    ): VFRenderResponse
+    ): VFActionResponse
 
     /**
      * 요청한 파라미터로 피팅 이미지 렌더링을 요청하는 Action Url 생성
@@ -49,7 +49,7 @@ interface VF {
         productId: Int,
         profileName: String,
         front: Float = 0f, rear: Float = 0f, legLength: Float = 0f, faceYaw: Float = 0f
-    ): VFRenderResponse
+    ): VFActionResponse
 
     /**
      * 현재 상품이 착용되어 있는화면을 저장하는 요청 Url 생성
@@ -57,7 +57,7 @@ interface VF {
      * @return Action Url 생성 완료 결과
      */
     fun requestCapture(
-    ): VFRenderResponse
+    ): VFActionResponse
 
     /**
      * 전달받은 이미지 버퍼를 전달받은 파일 경로에 저장
