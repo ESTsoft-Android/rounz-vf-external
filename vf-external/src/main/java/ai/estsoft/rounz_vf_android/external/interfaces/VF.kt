@@ -21,7 +21,7 @@ interface VF {
      *
      * @return Action Url 생성 완료 결과
      */
-    fun ready(
+    fun prepare(
     ): VFActionResponse
 
     /**
