@@ -9,7 +9,7 @@ interface VFResource {
      * @param url 리소스 서버 url
      * @return 리소스 다운로드 결과
      */
-    fun downloadCollections(
+    fun downloadVFCommonResource(
         url: String
     ): DownloadVFResourceResponse
 
@@ -20,7 +20,7 @@ interface VFResource {
      * @param vfResourceUrl 다운로드 할 URL 주소
      * @return 리소스 다운로드 결과
      */
-    fun downloadProduct(
+    fun downloadProductResource(
         productId: Int,
         vfResourceUrl: String
     ): DownloadVFResourceResponse
