@@ -7,7 +7,7 @@ interface FaceRecognizeListener {
      * 얼굴이 인식된 여부를 알려주는 콜백입니다.
      *
      * 얼굴영역이 가이드라인 안으로 들어오더라도 [onFaceRecognized] 콜백이 불린 상태면,
-     * [VideoProfile.unbind] 호출되기 전까지
+     * [FifteenCutProfile.unbind] 호출되기 전까지
      * [isRecognized] 값이 `true` 값으로 절대 넘어오지 않습니다.
      *
      * @param isRecognized 얼굴인식 여부

@@ -36,7 +36,7 @@ interface Profile {
      * @param gender 프로필 성별
      * @param faceSize 프로필 얼굴 크기
      */
-    fun updateProfileProperty(
+    fun updateFaceInfo(
         profileName: String,
         gender: Gender,
         faceSize: FaceSize
