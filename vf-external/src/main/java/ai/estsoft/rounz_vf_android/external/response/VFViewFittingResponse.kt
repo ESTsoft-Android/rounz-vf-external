@@ -7,5 +7,7 @@ sealed class VFViewFittingResponse {
     object ProductResourceLoadFailure : VFViewFittingResponse()
     object NotSupportedColorLensProfile : VFViewFittingResponse()
 
+    object RequestFittingFailure : VFViewFittingResponse()
+
     object UnknownError : VFViewFittingResponse()
 }
