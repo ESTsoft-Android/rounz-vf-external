@@ -1,7 +1,7 @@
 ext {
     //vf module main version
     version_code = 1
-    version_name = '1.0.0'
+    version_name = '1.0.1'
 
     // gradle plugin version
     gradle_version = '3.6.1'
