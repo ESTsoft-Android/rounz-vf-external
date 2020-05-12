@@ -14,7 +14,7 @@ buildscript {
         // realm local data cache
         classpath "io.realm:realm-gradle-plugin:$realm_gradle_version"
 
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+        classpath "com.github.dcendents:android-maven-gradle-plugin:$jitpack_release_gradle_version"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
