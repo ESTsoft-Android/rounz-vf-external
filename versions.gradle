@@ -6,6 +6,7 @@ ext {
     // gradle plugin version
     gradle_version = '3.6.1'
     realm_gradle_version = '6.0.2'
+    jitpack_release_gradle_version = '2.1'
 
     // aar config version
     compile_sdk_version = 28
