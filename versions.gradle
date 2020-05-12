@@ -1,4 +1,11 @@
 ext {
+    /**
+     * rounz-vf-android 프로젝트와 rounz-vf-external-android 프로젝트
+     * 두 개의 프로젝트에서 동일한 파일을 사용합니다.
+     *
+     * 파일 수정시 두 개의 프로젝트 모두 적용해 주세요.
+     */
+
     //vf module main version
     version_code = 1
     version_name = '1.0.1'
