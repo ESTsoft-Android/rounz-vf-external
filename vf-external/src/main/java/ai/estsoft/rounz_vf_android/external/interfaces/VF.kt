@@ -46,7 +46,7 @@ interface VF {
      * @return Action Url 생성 완료 결과
      */
     fun requestRender(
-        productId: Int,
+        productId: String,
         profileName: String,
         front: Float = 0f, rear: Float = 0f, legLength: Float = 0f, faceYaw: Float = 0f
     ): VFActionResponse

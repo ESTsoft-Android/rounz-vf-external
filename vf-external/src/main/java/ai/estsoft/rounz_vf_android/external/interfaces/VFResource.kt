@@ -21,7 +21,7 @@ interface VFResource {
      * @return 리소스 다운로드 결과
      */
     fun downloadProductResource(
-        productId: Int,
+        productId: String,
         vfResourceUrl: String
     ): DownloadVFResourceResponse
 }
