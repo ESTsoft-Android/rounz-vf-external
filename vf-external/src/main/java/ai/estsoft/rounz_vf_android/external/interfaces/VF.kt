@@ -37,7 +37,7 @@ interface VF {
     /**
      * 요청한 파라미터로 피팅 이미지 렌더링을 요청하는 Action Url 생성
      *
-     * @param productId 피팅할 상품 ID
+     * @param vfResourceId 피팅할 리소스 ID
      * @param profileName 피팅할 프로필, O2BaseAssets 하위 경로가 되어야 합니다.
      * @param front
      * @param rear
@@ -46,7 +46,7 @@ interface VF {
      * @return Action Url 생성 완료 결과
      */
     fun requestRender(
-        productId: String,
+        vfResourceId: String,
         profileName: String,
         front: Float = 0f, rear: Float = 0f, legLength: Float = 0f, faceYaw: Float = 0f
     ): VFActionResponse
