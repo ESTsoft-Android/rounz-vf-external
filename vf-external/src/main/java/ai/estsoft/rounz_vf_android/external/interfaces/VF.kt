@@ -36,6 +36,20 @@ interface VF {
 
     /**
      * 요청한 파라미터로 피팅 이미지 렌더링을 요청하는 Action Url 생성
+     * 안경다리 및 얼굴 방향은 내부에서 저장해두었던 값을 이용해서 피팅 처리
+     *
+     * @param vfResourceId 피팅할 리소스 ID
+     * @param profileName 피팅할 프로필, O2BaseAssets 하위 경로가 되어야 합니다.
+     * @return Action Url 생성 완료 결과
+     */
+    fun requestRender(
+        vfResourceId: String,
+        profileName: String
+    ): VFActionResponse
+
+    /**
+     * 요청한 파라미터로 피팅 이미지 렌더링을 요청하는 Action Url 생성
+     * 안경다리 및 얼굴 방향은 파라미터로 전달 받는 변화량을 이용해서 피팅 처리
      *
      * @param vfResourceId 피팅할 리소스 ID
      * @param profileName 피팅할 프로필, O2BaseAssets 하위 경로가 되어야 합니다.
@@ -45,11 +59,27 @@ interface VF {
      * @param faceYaw
      * @return Action Url 생성 완료 결과
      */
-    fun requestRender(
+    fun requestRenderOnGesture(
         vfResourceId: String,
         profileName: String,
         front: Float = 0f, rear: Float = 0f, legLength: Float = 0f, faceYaw: Float = 0f
     ): VFActionResponse
+
+    /**
+     * 마지막 렌더링 정보를 저장
+     * [requestRender]에서의 렌더링 요청은 내부에서 저장해뒀던 이 정보를 이용해서 피팅 처리
+     *
+     * @see front
+     * @see rear
+     * @see legLength
+     * @see faceYaw
+     */
+    fun updateLastRenderProperty(
+        front: Float,
+        rear: Float,
+        legLength: Float,
+        faceYaw: Float
+    )
 
     /**
      * 현재 상품이 착용되어 있는화면을 저장하는 요청 Url 생성
