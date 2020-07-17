@@ -82,6 +82,12 @@ interface VF {
     )
 
     /**
+     * 렌더링 정보를 초기화 한다.
+     * 얼굴 방향, 안경 다리 등을 초기 상태로 돌려 놓는다.
+     */
+    fun clearLastRenderProperty()
+
+    /**
      * 현재 상품이 착용되어 있는화면을 저장하는 요청 Url 생성
      *
      * @return Action Url 생성 완료 결과
